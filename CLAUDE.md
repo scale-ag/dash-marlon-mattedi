@@ -161,7 +161,24 @@ receita) · `Moeda da comissão` (9) · `Pagamento` (10) · **`Status`** (11) ·
    `O Treino do Leão` (4, outro funil) · `Control 2.0 Training` (1, versão em
    inglês — **não** casa com o prefixo `treino controle 2.0`, então conta só em
    Faturamento/ROAS, não em Vendas/CAC).
-7. **As colunas `Nome` e `E-mail` vêm vazias** em toda a amostra inspecionada —
+7. **Macros do Meta que não expandem** (visto em 14/09/2026): uma venda chegou
+   com `utm_campaign = '{{campaign.name}}'` e `utm_content = '{{ad.name}}'`
+   **literais** — o Meta não substituiu as macros. Sem nome de campanha nem de
+   anúncio, o match campanha+anúncio não tem o que casar, e a venda sumia da aba
+   Meta Ads (aparecia só em Vendas, por ser o produto principal). Como o
+   `utm_source` (`metaads`) diz que veio de tráfego pago, o build agora conta
+   essas vendas como pagas numa linha própria, **`(Meta — campanha não
+   identificada)`** — nunca coladas a uma campanha real, o que seria chute.
+   O critério exige que **campanha e anúncio** venham sem identidade (vazios ou
+   macro não expandida): uma `utm_campaign` com nome real que só não está no
+   export é outro funil e continua fora, senão o ROAS subiria com receita cujo
+   gasto não está na planilha.
+   ⚠️ Isso é **remendo, não conserto**. A correção de verdade é no Meta: o
+   anúncio precisa ter os parâmetros de URL num campo que expanda as macros.
+   A causa mais comum é o anúncio usar uma **publicação existente** (dark post),
+   em que o Meta não reescreve o link. Enquanto não for corrigido lá, essas
+   vendas contam no total do tráfego pago mas não dizem de qual criativo vieram.
+8. **As colunas `Nome` e `E-mail` vêm vazias** em toda a amostra inspecionada —
    a tabela de Vendas mostra `—` nessas colunas. É cosmético: o e-mail é
    mascarado de qualquer forma antes de ir para a página pública.
 
