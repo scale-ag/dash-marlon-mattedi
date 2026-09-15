@@ -1,0 +1,21 @@
+# WORKFLOW TEMPORARIO — diagnostico de atribuicao. Roda so nesta branch e sera
+# removido depois. Somente leitura das planilhas.
+name: Diagnostico de atribuicao (temporario)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ claude/diagnostico-atribuicao ]
+
+permissions:
+  contents: read
+
+jobs:
+  diagnosticar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/diagnostico.py
