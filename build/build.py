@@ -175,6 +175,29 @@ def is_main_product(prod: str) -> bool:
     return norm(prod).startswith(MAIN_PRODUCT_PREFIX)
 
 
+# Valores de utm_source que indicam tráfego pago do Meta.
+_META_SOURCES = ("metaads", "meta_ads", "meta ads", "meta", "facebook", "fb",
+                 "instagram", "ig")
+
+# Rótulo da linha onde caem as vendas pagas sem identidade de campanha/anúncio.
+UNIDENTIFIED_CAMP = "(Meta — campanha não identificada)"
+
+
+def is_unexpanded(v: str) -> bool:
+    """True quando a UTM não carrega identidade real: vazia, ou uma macro do
+    Meta que NÃO foi substituída — a venda chega com o texto literal
+    `{{campaign.name}}` / `{{ad.name}}` em vez do nome.
+
+    Acontece quando o anúncio usa uma publicação existente (dark post) ou os
+    parâmetros de URL foram postos num campo que o Meta não expande. Nesse caso
+    não dá para saber de QUAL campanha veio — só que veio do Meta (utm_source).
+    """
+    s = norm(v)
+    if not s:
+        return True
+    return "{{" in s or "}}" in s
+
+
 # ----- Máscara de PII (a página publicada é pública) ----- #
 def mask_email(e: str) -> str:
     e = (e or "").strip()
@@ -295,6 +318,7 @@ def process(meta_rows, sales_rows):
          "utm_term": ["utm term", "utm_term"],
          "utm_campaign": ["utm campaign", "utm_campaign"],
          "utm_medium": ["utm medium", "utm_medium"],
+         "utm_source": ["utm source", "utm_source"],
          "status": ["status"]},
         # Fallback posicional só p/ colunas que existem nesta planilha
         # (Produto·Nome·Email·Data·Valor·Taxas·Faturamento). Sem fallback p/
@@ -318,22 +342,40 @@ def process(meta_rows, sales_rows):
         # parametrizador de URL do cliente. A outra normalmente carrega o
         # POSICIONAMENTO (Instagram_Feed/Stories, Facebook_Mobile_Feed), que não
         # casa com nada do Meta; conferir antes de mudar.
-        ad = cell(row, sidx[AD_UTM_COLUMN]) or "(sem anúncio)"
-        sale_camp = cell(row, sidx["utm_campaign"]) or "(sem campanha)"
+        ad_raw = cell(row, sidx[AD_UTM_COLUMN])
+        camp_raw = cell(row, sidx["utm_campaign"])
+        ad = ad_raw or "(sem anúncio)"
+        sale_camp = camp_raw or "(sem campanha)"
         main = is_main_product(prod)
         # Match com o Meta = campanha + anúncio juntos (o mesmo Ad Name se repete
         # entre campanhas; casar só pelo anúncio atribui a venda à campanha errada).
         meta_key = (norm(sale_camp), norm(ad))
         meta_hit = ad_map.get(meta_key)
+        # Venda que veio do Meta mas SEM identidade de campanha/anúncio: o Meta não
+        # substituiu as macros e a UTM chegou como `{{campaign.name}}` literal. O
+        # utm_source diz que é tráfego pago, então ela conta como pago — mas numa
+        # linha própria (UNIDENTIFIED_CAMP), nunca colada a uma campanha real, o que
+        # seria chute. Exige AS DUAS (campanha e anúncio) sem identidade: uma UTM de
+        # campanha real que simplesmente não está no export do Meta é outro funil,
+        # e entrar aqui inflaria o ROAS com receita cujo gasto não está na planilha.
+        paid_unidentified = (
+            meta_hit is None
+            and norm(cell(row, sidx["utm_source"])) in _META_SOURCES
+            and is_unexpanded(camp_raw)
+            and is_unexpanded(ad_raw)
+        )
         # Atribuição ao tráfego rastreado: produto principal OU par campanha+anúncio
-        # que existe no Meta (captura orderbumps/upsells que carregam a UTM do anúncio).
-        attributed = main or (meta_hit is not None)
+        # que existe no Meta (captura orderbumps/upsells que carregam a UTM do anúncio)
+        # OU venda paga sem identidade de campanha (acima).
+        attributed = main or (meta_hit is not None) or paid_unidentified
         if not attributed:
             continue
         # Quando casa com o Meta, usa a campanha/conjunto REAIS do Meta (mantém a
         # venda na mesma linha do gasto nas tabelas). Senão, usa as UTMs da venda.
         if meta_hit is not None:
             camp, adset = meta_hit
+        elif paid_unidentified:
+            camp, adset, ad = UNIDENTIFIED_CAMP, "(sem conjunto)", "(sem anúncio)"
         else:
             camp = sale_camp
             adset = cell(row, sidx["utm_medium"]) or "(sem conjunto)"
@@ -346,7 +388,7 @@ def process(meta_rows, sales_rows):
             # meta=1 quando a venda casa com campanha+anúncio real do Meta (tráfego
             # pago). Vendas do produto principal sem esse match (orgânico/direto, ou
             # UTM sem anúncio identificável) têm meta=0.
-            "meta": 1 if meta_hit is not None else 0,
+            "meta": 1 if (meta_hit is not None or paid_unidentified) else 0,
             "nm": first_last_initial(cell(row, sidx["name"])),
             "em": mask_email(cell(row, sidx["email"])),
         })
