@@ -1,19 +1,19 @@
 {
-  "gerado_em": "12/10/2026 06:48",
-  "hoje": "2026-10-12",
+  "gerado_em": "13/10/2026 06:45",
+  "hoje": "2026-10-13",
   "periodo_dados": {
     "de": "2026-09-01",
-    "ate": "2026-10-11"
+    "ate": "2026-10-12"
   },
   "metas": {
     "cac": 200.0,
     "roas": 1.24
   },
-  "ticket_medio_geral": 244.7,
+  "ticket_medio_geral": 246.13,
   "periodos": {
     "hoje": {
-      "de": "2026-10-12",
-      "ate": "2026-10-12",
+      "de": "2026-10-13",
+      "ate": "2026-10-13",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
@@ -61,16 +61,16 @@
       "piores_anuncios": []
     },
     "ontem": {
-      "de": "2026-10-11",
-      "ate": "2026-10-11",
+      "de": "2026-10-12",
+      "ate": "2026-10-12",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
         "cliques": 0.0,
         "pv": 0.0,
         "ck": 0.0,
-        "vendas": 4,
-        "fat": 1020.97,
+        "vendas": 9,
+        "fat": 2561.96,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -82,7 +82,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 255.24
+        "ticket": 284.66
       },
       "ads": {
         "gasto": 0.0,
@@ -110,16 +110,16 @@
       "piores_anuncios": []
     },
     "3d": {
-      "de": "2026-10-10",
-      "ate": "2026-10-12",
+      "de": "2026-10-11",
+      "ate": "2026-10-13",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
         "cliques": 0.0,
         "pv": 0.0,
         "ck": 0.0,
-        "vendas": 8,
-        "fat": 1599.61,
+        "vendas": 13,
+        "fat": 3582.93,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -131,7 +131,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 199.95
+        "ticket": 275.61
       },
       "ads": {
         "gasto": 0.0,
@@ -159,16 +159,16 @@
       "piores_anuncios": []
     },
     "7d": {
-      "de": "2026-10-06",
-      "ate": "2026-10-12",
+      "de": "2026-10-07",
+      "ate": "2026-10-13",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
         "cliques": 0.0,
         "pv": 0.0,
         "ck": 0.0,
-        "vendas": 30,
-        "fat": 6797.91,
+        "vendas": 33,
+        "fat": 8380.05,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -180,7 +180,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 226.6
+        "ticket": 253.94
       },
       "ads": {
         "gasto": 0.0,
@@ -208,16 +208,16 @@
       "piores_anuncios": []
     },
     "14d": {
-      "de": "2026-09-29",
-      "ate": "2026-10-12",
+      "de": "2026-09-30",
+      "ate": "2026-10-13",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
         "cliques": 0.0,
         "pv": 0.0,
         "ck": 0.0,
-        "vendas": 65,
-        "fat": 15166.23,
+        "vendas": 70,
+        "fat": 16647.23,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -229,7 +229,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 233.33
+        "ticket": 237.82
       },
       "ads": {
         "gasto": 0.0,
@@ -257,72 +257,72 @@
       "piores_anuncios": []
     },
     "30d": {
-      "de": "2026-09-13",
-      "ate": "2026-10-12",
+      "de": "2026-09-14",
+      "ate": "2026-10-13",
       "total": {
-        "gasto": 3046.21,
-        "impr": 64984.0,
-        "cliques": 957.0,
-        "pv": 501.0,
-        "ck": 47.0,
-        "vendas": 166,
-        "fat": 39638.29,
-        "cpm": 46.88,
-        "ctr": 0.0147,
-        "cpc": 3.18,
-        "cpv": 6.08,
-        "cr": 0.5235,
-        "cpic": 64.81,
-        "vischk": 0.0938,
-        "convchk": 0.1702,
-        "convlp": 0.016,
-        "cac": 18.35,
-        "roas": 13.01,
-        "ticket": 238.78
+        "gasto": 2613.43,
+        "impr": 52551.0,
+        "cliques": 838.0,
+        "pv": 493.0,
+        "ck": 41.0,
+        "vendas": 171,
+        "fat": 40859.91,
+        "cpm": 49.73,
+        "ctr": 0.0159,
+        "cpc": 3.12,
+        "cpv": 5.3,
+        "cr": 0.5883,
+        "cpic": 63.74,
+        "vischk": 0.0832,
+        "convchk": 0.1707,
+        "convlp": 0.0142,
+        "cac": 15.28,
+        "roas": 15.63,
+        "ticket": 238.95
       },
       "ads": {
-        "gasto": 3046.21,
-        "impr": 64984.0,
-        "cliques": 957.0,
-        "pv": 501.0,
-        "ck": 47.0,
-        "vendas": 8,
-        "fat": 2639.66,
-        "cpm": 46.88,
-        "ctr": 0.0147,
-        "cpc": 3.18,
-        "cpv": 6.08,
-        "cr": 0.5235,
-        "cpic": 64.81,
-        "vischk": 0.0938,
-        "convchk": 0.1702,
-        "convlp": 0.016,
-        "cac": 380.78,
+        "gasto": 2613.43,
+        "impr": 52551.0,
+        "cliques": 838.0,
+        "pv": 493.0,
+        "ck": 41.0,
+        "vendas": 7,
+        "fat": 2279.5,
+        "cpm": 49.73,
+        "ctr": 0.0159,
+        "cpc": 3.12,
+        "cpv": 5.3,
+        "cr": 0.5883,
+        "cpic": 63.74,
+        "vischk": 0.0832,
+        "convchk": 0.1707,
+        "convlp": 0.0142,
+        "cac": 373.35,
         "roas": 0.87,
-        "ticket": 329.96
+        "ticket": 325.64
       },
       "campanhas": [
         {
           "nome": "C20 | E4-VEN | P2-FRIO | VND | CBO | 2026-09-03 | BR | Aberto ADV",
-          "gasto": 1731.22,
-          "impr": 42572.0,
-          "cliques": 387.0,
-          "pv": 24.0,
-          "ck": 31.0,
-          "vendas": 6,
-          "fat": 1990.0,
-          "cpm": 40.67,
-          "ctr": 0.0091,
-          "cpc": 4.47,
-          "cpv": 72.13,
-          "cr": 0.062,
-          "cpic": 55.85,
-          "vischk": 1.2917,
-          "convchk": 0.1935,
-          "convlp": 0.25,
-          "cac": 288.54,
-          "roas": 1.15,
-          "ticket": 331.67
+          "gasto": 1298.44,
+          "impr": 30139.0,
+          "cliques": 268.0,
+          "pv": 16.0,
+          "ck": 25.0,
+          "vendas": 5,
+          "fat": 1629.84,
+          "cpm": 43.08,
+          "ctr": 0.0089,
+          "cpc": 4.84,
+          "cpv": 81.15,
+          "cr": 0.0597,
+          "cpic": 51.94,
+          "vischk": 1.5625,
+          "convchk": 0.2,
+          "convlp": 0.3125,
+          "cac": 259.69,
+          "roas": 1.26,
+          "ticket": 325.97
         },
         {
           "nome": "C20 | E4-VEN | P2-FRIO | VND | CBO | 2026-09-14 | BR | Novo dominio e pixel",
@@ -394,24 +394,24 @@
       "top_anuncios": [
         {
           "nome": "AD07 - As causas",
-          "gasto": 873.71,
-          "vendas": 4,
-          "cac": 218.43,
-          "roas": 1.57
+          "gasto": 518.02,
+          "vendas": 3,
+          "cac": 172.67,
+          "roas": 1.95
         },
         {
           "nome": "AD03 - Exponencial",
-          "gasto": 863.45,
+          "gasto": 856.04,
           "vendas": 2,
-          "cac": 431.72,
-          "roas": 0.67
+          "cac": 428.02,
+          "roas": 0.68
         },
         {
           "nome": "AD06 - Qual a especialidade",
-          "gasto": 757.89,
+          "gasto": 688.21,
           "vendas": 1,
-          "cac": 757.89,
-          "roas": 0.44
+          "cac": 688.21,
+          "roas": 0.48
         },
         {
           "nome": "AD26-20 Poucos homens sabem disso",
@@ -447,15 +447,15 @@
     },
     "mes": {
       "de": "2026-10-01",
-      "ate": "2026-10-12",
+      "ate": "2026-10-13",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
         "cliques": 0.0,
         "pv": 0.0,
         "ck": 0.0,
-        "vendas": 57,
-        "fat": 13047.64,
+        "vendas": 66,
+        "fat": 15609.6,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -467,7 +467,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 228.91
+        "ticket": 236.51
       },
       "ads": {
         "gasto": 0.0,
@@ -772,15 +772,15 @@
     },
     "todo": {
       "de": "2026-09-01",
-      "ate": "2026-10-11",
+      "ate": "2026-10-12",
       "total": {
         "gasto": 8273.16,
         "impr": 172031.0,
         "cliques": 2020.0,
         "pv": 551.0,
         "ck": 120.0,
-        "vendas": 243,
-        "fat": 59463.07,
+        "vendas": 252,
+        "fat": 62025.03,
         "cpm": 48.09,
         "ctr": 0.0117,
         "cpc": 4.1,
@@ -790,9 +790,9 @@
         "vischk": 0.2178,
         "convchk": 0.1917,
         "convlp": 0.0417,
-        "cac": 34.05,
-        "roas": 7.19,
-        "ticket": 244.7
+        "cac": 32.83,
+        "roas": 7.5,
+        "ticket": 246.13
       },
       "ads": {
         "gasto": 8273.16,
