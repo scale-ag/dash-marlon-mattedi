@@ -1,19 +1,19 @@
 {
-  "gerado_em": "06/11/2026 06:56",
-  "hoje": "2026-11-06",
+  "gerado_em": "07/11/2026 06:17",
+  "hoje": "2026-11-07",
   "periodo_dados": {
     "de": "2026-09-01",
-    "ate": "2026-11-06"
+    "ate": "2026-11-07"
   },
   "metas": {
     "cac": 200.0,
     "roas": 1.24
   },
-  "ticket_medio_geral": 238.81,
+  "ticket_medio_geral": 237.71,
   "periodos": {
     "hoje": {
-      "de": "2026-11-06",
-      "ate": "2026-11-06",
+      "de": "2026-11-07",
+      "ate": "2026-11-07",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
@@ -21,7 +21,7 @@
         "pv": 0.0,
         "ck": 0.0,
         "vendas": 1,
-        "fat": 33.14,
+        "fat": 288.9,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -33,7 +33,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 33.14
+        "ticket": 288.9
       },
       "ads": {
         "gasto": 0.0,
@@ -61,16 +61,16 @@
       "piores_anuncios": []
     },
     "ontem": {
-      "de": "2026-11-05",
-      "ate": "2026-11-05",
+      "de": "2026-11-06",
+      "ate": "2026-11-06",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
         "cliques": 0.0,
         "pv": 0.0,
         "ck": 0.0,
-        "vendas": 7,
-        "fat": 1600.07,
+        "vendas": 6,
+        "fat": 766.89,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -82,7 +82,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 228.58
+        "ticket": 127.81
       },
       "ads": {
         "gasto": 0.0,
@@ -110,8 +110,8 @@
       "piores_anuncios": []
     },
     "3d": {
-      "de": "2026-11-04",
-      "ate": "2026-11-06",
+      "de": "2026-11-05",
+      "ate": "2026-11-07",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
@@ -119,7 +119,7 @@
         "pv": 0.0,
         "ck": 0.0,
         "vendas": 14,
-        "fat": 3009.64,
+        "fat": 2655.86,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -131,7 +131,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 214.97
+        "ticket": 189.7
       },
       "ads": {
         "gasto": 0.0,
@@ -159,16 +159,16 @@
       "piores_anuncios": []
     },
     "7d": {
-      "de": "2026-10-31",
-      "ate": "2026-11-06",
+      "de": "2026-11-01",
+      "ate": "2026-11-07",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
         "cliques": 0.0,
         "pv": 0.0,
         "ck": 0.0,
-        "vendas": 36,
-        "fat": 8379.91,
+        "vendas": 39,
+        "fat": 8726.83,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -180,7 +180,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 232.78
+        "ticket": 223.76
       },
       "ads": {
         "gasto": 0.0,
@@ -208,16 +208,16 @@
       "piores_anuncios": []
     },
     "14d": {
-      "de": "2026-10-24",
-      "ate": "2026-11-06",
+      "de": "2026-10-25",
+      "ate": "2026-11-07",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
         "cliques": 0.0,
         "pv": 0.0,
         "ck": 0.0,
-        "vendas": 77,
-        "fat": 18523.75,
+        "vendas": 78,
+        "fat": 18319.7,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -229,7 +229,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 240.57
+        "ticket": 234.87
       },
       "ads": {
         "gasto": 0.0,
@@ -257,8 +257,8 @@
       "piores_anuncios": []
     },
     "30d": {
-      "de": "2026-10-08",
-      "ate": "2026-11-06",
+      "de": "2026-10-09",
+      "ate": "2026-11-07",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
@@ -266,7 +266,7 @@
         "pv": 0.0,
         "ck": 0.0,
         "vendas": 149,
-        "fat": 34403.36,
+        "fat": 33912.12,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -278,7 +278,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 230.9
+        "ticket": 227.6
       },
       "ads": {
         "gasto": 0.0,
@@ -307,15 +307,15 @@
     },
     "mes": {
       "de": "2026-11-01",
-      "ate": "2026-11-06",
+      "ate": "2026-11-07",
       "total": {
         "gasto": 0.0,
         "impr": 0.0,
         "cliques": 0.0,
         "pv": 0.0,
         "ck": 0.0,
-        "vendas": 33,
-        "fat": 7704.18,
+        "vendas": 39,
+        "fat": 8726.83,
         "cpm": null,
         "ctr": null,
         "cpc": null,
@@ -327,7 +327,7 @@
         "convlp": null,
         "cac": 0.0,
         "roas": null,
-        "ticket": 233.46
+        "ticket": 223.76
       },
       "ads": {
         "gasto": 0.0,
@@ -405,15 +405,15 @@
     },
     "todo": {
       "de": "2026-09-01",
-      "ate": "2026-11-06",
+      "ate": "2026-11-07",
       "total": {
         "gasto": 8273.16,
         "impr": 172031.0,
         "cliques": 2020.0,
         "pv": 551.0,
         "ck": 120.0,
-        "vendas": 369,
-        "fat": 88119.98,
+        "vendas": 375,
+        "fat": 89142.63,
         "cpm": 48.09,
         "ctr": 0.0117,
         "cpc": 4.1,
@@ -423,9 +423,9 @@
         "vischk": 0.2178,
         "convchk": 0.1917,
         "convlp": 0.0417,
-        "cac": 22.42,
-        "roas": 10.65,
-        "ticket": 238.81
+        "cac": 22.06,
+        "roas": 10.77,
+        "ticket": 237.71
       },
       "ads": {
         "gasto": 8273.16,
